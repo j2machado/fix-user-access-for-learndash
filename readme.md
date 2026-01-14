@@ -19,11 +19,15 @@ Go to the 'Users' menu in the WordPress admin panel and click on 'Fix User Acces
 
 Go to the 'Courses' menu in the WordPress admin panel and select the course you want to fix user access for.
 
+![Screenshot](https://obijuan.dev/wp-content/uploads/2026/01/Screenshot-from-2026-01-14-15-14-02.png)
+
 Inside the course edit screen, click on the 'Fix User Access' tab.
 
 In the User with Fixed Access field, select the users you want to fix access for.
 
 This is a multi-select field, so you can select multiple users. You can search users by name, username or ID.
+
+![Screenshot](https://obijuan.dev/wp-content/uploads/2026/01/Screenshot-from-2026-01-14-15-14-49.png)
 
 After selecting the users, click on the 'Save Changes' button to save the changes.
 
