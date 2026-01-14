@@ -193,9 +193,9 @@ add_action('manage_sfwd-courses_posts_custom_column', function($column, $post_id
         $count = is_array($course_users) ? count($course_users) : 0;
         
         if ($count > 0) {
-            echo '<span style="display: inline-block; background: #2271b1; color: #fff; padding: 3px 8px; border-radius: 3px; font-weight: 600;">' . esc_html($count) . '</span>';
+            echo '<a href="' . esc_url(admin_url('post.php?post=' . $post_id . '&action=edit&currentTab=learndash_course_fix_user_access')) . '"><span style="display: inline-block; background: #2271b1; color: #fff; padding: 3px 8px; border-radius: 3px; font-weight: 600;">' . esc_html($count) . '</span></a>';
         } else {
-            echo '<span style="color: #999;">—</span>';
+            echo '<a href="' . esc_url(admin_url('post.php?post=' . $post_id . '&action=edit&currentTab=learndash_course_fix_user_access')) . '"><span style="color: #999;"> None - click to add </span></a>';
         }
     }
 }, 10, 2);
