@@ -226,6 +226,7 @@ if (
 							</div>
 
 							<style>
+								/* Selection box - make items wrap */
 								.fix-user-access-course-wrapper .select2-container--default .select2-selection--multiple {
 									min-height: 38px;
 									max-height: 180px;
@@ -234,17 +235,99 @@ if (
 									padding: 4px;
 									box-sizing: border-box;
 								}
+								
+								/* Make selected items wrap instead of going inline forever */
 								.fix-user-access-course-wrapper .select2-container--default .select2-selection--multiple .select2-selection__rendered {
-									display: block;
+									display: flex;
+									flex-wrap: wrap;
+									gap: 4px;
+									padding: 0;
 								}
+								
+								/* Selected item pills */
 								.fix-user-access-course-wrapper .select2-container--default .select2-selection--multiple .select2-selection__choice {
-									margin: 4px 4px 4px 0;
+									margin: 0 !important;
+									padding: 3px 8px;
+									background-color: #2271b1;
+									color: #fff;
+									border: none;
+									border-radius: 3px;
+									display: inline-flex;
+									align-items: center;
+									max-width: 100%;
+									white-space: nowrap;
+									overflow: hidden;
+									text-overflow: ellipsis;
 								}
+								
+								/* Remove button in pills */
+								.fix-user-access-course-wrapper .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+									color: #fff;
+									margin-right: 5px;
+									font-weight: bold;
+									border: none;
+									background: transparent;
+								}
+								
+								.fix-user-access-course-wrapper .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
+									color: #f0f0f1;
+									background: transparent;
+								}
+								
+								/* Search input field */
+								.fix-user-access-course-wrapper .select2-search--inline {
+									display: inline-block;
+									width: auto !important;
+									min-width: 200px;
+								}
+								
 								.fix-user-access-course-wrapper .select2-search--inline .select2-search__field {
 									margin: 0 !important;
-									padding: 0 4px !important;
+									padding: 4px !important;
 									height: 28px !important;
 									line-height: 28px !important;
+									border: none !important;
+									box-shadow: none !important;
+								}
+								
+								/* Dropdown results */
+								.fix-user-access-course-wrapper .select2-container--default .select2-results__option {
+									padding: 8px 12px;
+								}
+								
+								/* Highlighted/hovered result */
+								.fix-user-access-course-wrapper .select2-container--default .select2-results__option--highlighted[aria-selected] {
+									background-color: #2271b1 !important;
+									color: #fff !important;
+								}
+
+								.select2-results__option--highlighted {
+									background-color: #2271b1 !important;
+									color: #fff !important;
+								}
+								
+								/* Selected result (checkmark) */
+								.fix-user-access-course-wrapper .select2-container--default .select2-results__option[aria-selected="true"] {
+									background-color: #f0f0f1;
+								}
+								
+								/* Dropdown container */
+								.fix-user-access-course-wrapper .select2-dropdown {
+									border: 1px solid #8c8f94;
+									border-radius: 4px;
+								}
+								
+								/* Search field in dropdown */
+								.fix-user-access-course-wrapper .select2-search--dropdown .select2-search__field {
+									border: 1px solid #8c8f94;
+									padding: 6px 12px;
+									border-radius: 4px;
+								}
+								
+								.fix-user-access-course-wrapper .select2-search--dropdown .select2-search__field:focus {
+									border-color: #2271b1;
+									outline: none;
+									box-shadow: 0 0 0 1px #2271b1;
 								}
 							</style>
 
