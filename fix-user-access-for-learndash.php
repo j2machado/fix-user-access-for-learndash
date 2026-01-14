@@ -9,6 +9,13 @@ Author URI: https://obijuan.dev
 License: GPL2
 */
 
+// Load course metabox
+add_action( 'learndash_settings_sections_init', function() {
+	if ( file_exists( __DIR__ . '/admin/single-course.php' ) ) {
+		require_once __DIR__ . '/admin/single-course.php';
+	}
+} );
+
 // ENQUEUE SELECT2 (unchanged)
 add_action('admin_enqueue_scripts', function($hook) {
     if ($hook !== 'users_page_ld-fix-user-access') return;
